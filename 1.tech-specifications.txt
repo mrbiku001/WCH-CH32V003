@@ -1,0 +1,86 @@
+CH32V003: MOST AFFORDABLE 10-CENT RISC-V MCU ON THE MARKET
+https://pallavaggarwal.in/2022/11/09/wch-riscv-microcontroller-ch32v003/#google_vignette
+
+Technical Spec
+32-bit RISCV 2A Core
+Up to 48MHz system frequency
+2KB SRAM, 16KB Flash
+1x DMA controller
+1x OpAmp comparators
+10-bit ADC
+1x 16-bit advanced timer and 1x 16-bit general-purpose timer
+2x watchdog timers and 1x 32-bit system time base timer
+1x USART
+1x I2C
+1x SPI interface
+upto 18 I/O ports, mirroring an external interrupt
+64-bit chip unique ID
+Serial 1-Wire Debug Interface
+Multiple low power modes: sleep, standby
+Supply voltage: 3.3/5V
+Power-on/power-off reset, programmable voltage detector
+Package form: TSSOP20, QFN20, SOP16, SOP8
+
+Download Free Altium Schematic and PCB Library
+https://github.com/Pallav-Aggarwal/CH32V003-Altium-Sch-PCB-Library
+
+embeetle Board reference
+Here we can find connections and other references related to board
+https://embeetle.com/#supported-hardware/wch
+
+ Core
+        - QingKe 32-bit RISC-V core, RV32EC
+        instruction set
+        - Fast programmable interrupt controller +
+        hardware interrupt stack
+        - Support 2-level interrupt nesting
+        - Support system main frequency 48MHz
+ Memory
+        - 2KB volatile data storage area SRAM
+        - 16KB program memory CodeFlash
+        - 1920B BootLoader
+        - 64B non-volatile system configuration
+memory
+        - 64B user-defined memory
+ Power management and low-power
+consumption
+        - System power supply VDD: 3.3V or 5V
+        - Low-power mode: Sleep, Standby
+ Clock & Reset
+        - Built-in factory-trimmed 24MHz RC
+        oscillator
+        - Built-in 128KHz RC oscillator
+        - High-speed external 4~25MHz oscillator
+        - Power on/down reset, programmable voltage
+        detector
+ 1 group of 1-channel general-purpose DMA
+controller
+        - 7 channels, support ring buffer
+        - Support TIMx/ADC /USART/I2C/SPI
+ 1 group of OPA and comparator: connected
+with ADC and TIM2
+ 1 group of 10-bit ADC
+        - Analog input range: 0~VDD
+        - 8 external signals + 2 internal signals
+        - Support external delayed triggering
+ Multiple timers
+        - 1 16-bit advanced-control timers, with dead
+        zone control and emergency brake; can offer
+        PWM complementary output for motor control
+        - 1 16-bit general-purpose timers, provide
+        input capture/output comparison/PWM/pulse
+        counting/incremental encoder input
+        - 2 watchdog timers (independent watchdog
+        and window watchdog)
+        - SysTick: 32-bit counter
+ Communication interfaces
+        - 1 USART interfaces
+        - 1 I2C interfaces
+        - 1 SPI interfaces
+ GPIO port
+        - 3 groups of GPIO ports, 18 I/O ports
+        - Mapping 1 external interrupt
+ Security features: 64-bit unique ID
+ Debug mode: 1-wire serial debug interface
+(SDI)
+ Package: SOP, TSSOP or QFN

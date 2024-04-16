@@ -1,0 +1,18 @@
+---:GPIO as Input Example Code for CH32V003:---
+For any configuration, clock for that GPIO port needs to be enabled first.
+
+Two parameters are there for any GPIO when configuring as output
+
+        GPIO_Pin: this is to define which Pin, for example for D3 it will be GPIO_Pin_3
+        GPIO_Mode: to configure if the Input will be with internal pull-up resistance(GPIO_Mode_IPU) or pull-down resistance(GPIO_Mode_IPU) or input which is floating (GPIO_Mode_IN_FLOATING).
+            code\ex006.c
+
+In order to read the GPIO input there are two functions
+
+    uint8_t  GPIO_ReadInputDataBit(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+    uint16_t GPIO_ReadInputData(GPIO_TypeDef *GPIOx);
+        GPIO_ReadInputDataBit is used to get the status of single bit/pin whether it is high or low.
+        GPIO_ReadInputData function is used to read the full port, example if D0-7 data port need to be read, this function could be used.
+
+code: GPIO input in Polling Mode. code\ex007.c
+code: GPIO Input in Interrupt Mode code\ex008.c

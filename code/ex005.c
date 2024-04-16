@@ -1,0 +1,19 @@
+// And, now suppose if you want to configure different pins of different ports, you can write code like this: (GPIO D0 and C1)
+void GPIO_Config(void)
+{
+GPIO_InitTypeDef GPIO_InitStructure = {0}; //structure variable used for the GPIO configuration
+
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE); // to Enable the clock for Port C
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE); // to Enable the clock for Port D
+
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0; // Defines which Pin to configure
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; // Defines Output Type
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz; // Defines speed
+GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1; // Defines which Pin to configure
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD; // Defines Output Type
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_2MHz; // Defines speed
+GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+}
