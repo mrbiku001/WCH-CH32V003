@@ -23,3 +23,7 @@ Package form: TSSOP20, QFN20, SOP16, SOP8
 
 Download Free Altium Schematic and PCB Library
 https://github.com/Pallav-Aggarwal/CH32V003-Altium-Sch-PCB-Library
+
+embeetle Board reference
+Here we can find connections and other references related to board
+https://embeetle.com/#supported-hardware/wch
